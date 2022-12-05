@@ -27,6 +27,7 @@ function GameCard() {
            
                 <button className={like ? "": "logo"} onClick={handelClick}>🕹️</button>
                 
+            )}
         </li>
     )
 }

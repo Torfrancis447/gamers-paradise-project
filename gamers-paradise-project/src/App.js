@@ -4,6 +4,7 @@ import Header from './Header';
 import Search from './Search'
 
 function App() {
+  
   return (
     <div>
       <Header/>

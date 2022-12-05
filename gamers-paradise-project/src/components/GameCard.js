@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-function GameCard() {
+function GameCard({id,name,platform,released,image,games}) {
     const [like,setLike] = useState(true)
-    const [hide,setHide] =useState(true)
+    const [hide,setHide] =useState(false)
     const handelClick = ()=>{
         setLike(!like)
     } 
@@ -12,23 +12,25 @@ function GameCard() {
    }
   
     return (
+        <>
         <li className="card">
-            <h4>God Of War</h4>
-            <img src="https://www.mobygames.com/images/covers/l/198187-god-of-war-playstation-2-front-cover.png" alt=""/>
+            <h4>{name}</h4>
+            <img src={image}/>
             {hide ? (
                 <button onClick={handelMore}>MORE</button> 
                 ):(<>
                 <button onClick={handelMore} >LESS</button>
-                    <h5>Related Date: March 22, 2005 </h5>
-                    <h6>PlatForms:Playstation</h6>
+                    <p>PlatForms: {platform} </p>
+                    <span>Related Date: {released} </span>
                 </>
             )}
             <br></br>
            
                 <button className={like ? "": "logo"} onClick={handelClick}>🕹️</button>
                 
-            )}
+            
         </li>
+        </>
     )
 }
 

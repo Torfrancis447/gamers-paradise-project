@@ -7,7 +7,8 @@ function Search(){
             </label>
             <input
             type="text"
-            placeholder="Search your games... "            
+            placeholder="Search your games... "
+            //User needs to search through name           
             />
 
         </div>

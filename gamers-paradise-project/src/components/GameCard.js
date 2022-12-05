@@ -16,6 +16,11 @@ function GameCard() {
                     <button onClick={handelClick} >♥</button>
                 
             )}
+
+
+            
+            {/* render- name, rating, id, platform, image */}
+        
         </li>
     )
 }

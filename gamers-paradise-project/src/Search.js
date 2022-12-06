@@ -1,6 +1,13 @@
-function Search(){
+function Search({setSearched}){
 
+<<<<<<< HEAD
 
+=======
+    const handleSearched= (e) =>{
+        setSearched(e.target.value)
+    }
+    
+>>>>>>> main
     return(
         <div className="search-bar">
            <label>
@@ -9,8 +16,13 @@ function Search(){
             <input
             type="text"
             placeholder="Search your games... "
+<<<<<<< HEAD
             //User needs to search through name 
                       
+=======
+            //User needs to search through name
+            onChange={handleSearched}           
+>>>>>>> main
             />
 
         </div>

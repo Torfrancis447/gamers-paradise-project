@@ -3,6 +3,10 @@ import GameList from './components/GameList';
 import Header from './Header';
 import Search from './Search'
 import React, { useEffect, useState } from "react"
+import Dashboard from './components/Dashboard';
+import Preferences from './components/Preferences'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 
 function App() {
@@ -17,11 +21,15 @@ function App() {
 
   console.log(gameData.results)
   return (
-    <div>
-      <Header/>
-      <Search/>
-      <GameList />
+  
     </div>
+    
+    <div >
+      
+      
+      
+    </div>
+    </>
   );
 }
 

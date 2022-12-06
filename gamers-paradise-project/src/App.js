@@ -3,8 +3,7 @@ import GameList from './components/GameList';
 import Header from './Header';
 import Search from './Search'
 import React, { useEffect, useState } from "react"
-import Dashboard from './components/Dashboard';
-import Preferences from './components/Preferences'
+
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { Link } from "react-router-dom";
 
@@ -28,15 +27,14 @@ function App() {
   
   return (
     <>
-    <div className="wrapper">
+    <div >
       <Header />
       <BrowserRouter>
+      <div className="wrapper">
       <Link  className="button wrapper" to="/">Home</Link> 
       <Link className="button wrapper" to="/games">Games</Link>
+      </div>
         <Switch>
-          <Route path="/search">
-          
-          </Route>
           <Route path="/games">
           <Search setSearched={setSearched}/>
           <GameList games={filteredGames} />

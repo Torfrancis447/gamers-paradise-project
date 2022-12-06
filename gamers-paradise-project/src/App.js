@@ -7,6 +7,11 @@ import React, { useEffect, useState } from "react"
 
 function App() {
   const [games,setGames] =useState([])
+  const[searched, setSearched]=useState('')
+
+  const filteredGames= games.filter((plantArray) =>{
+    return plantArray.name.toLowerCase().includes(searched.toLowerCase())})
+
   useEffect(()=>{
     fetch(`https://api.rawg.io/api/games?key=67202bd4d44e4c7da8fdbad44df5b8da&search`)
     .then(res => res.json())
@@ -15,11 +20,13 @@ function App() {
       ))
   }
 ,[])
+
+  
   return (
     <div>
-      <Header/>
-      <Search/>
-      <GameList games={games} />
+      <Header />
+      <Search setSearched={setSearched}/>
+      <GameList games={filteredGames} />
     </div>
   );
 }

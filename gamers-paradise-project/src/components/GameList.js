@@ -4,11 +4,9 @@ import GameCard from "./GameCard"
 
 function GameList({games}) {
     const renderGames = games.map((game)=>{
-        console.log(game)
+        
         return <GameCard key={game.id}
-        platform={game.parent_platforms.map((plat)=>{
-            return ""+ plat.platform.name
-        })}
+        platforms={game.parent_platforms}
         id={game.id}
         name={game.name}
         released={game.released}

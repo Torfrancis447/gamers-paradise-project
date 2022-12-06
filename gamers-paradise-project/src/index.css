@@ -18,3 +18,10 @@ header h1 {
   text-align: center
 }
 
+
+.card .icon {
+  max-width:10%;
+  padding-inline: 5;
+  object-fit:contain;
+}
+

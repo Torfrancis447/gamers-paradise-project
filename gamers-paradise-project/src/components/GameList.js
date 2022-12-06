@@ -16,9 +16,9 @@ function GameList({games}) {
 
 
     return (
-        <div>
+        <ul className="cards">
             {renderGames}
-        </div>
+        </ul>
     )
 }
 export default GameList

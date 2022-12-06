@@ -25,6 +25,7 @@
     .cards {
       display: flex;
       flex-wrap: wrap;
+      
     }
   
     .card {
@@ -43,4 +44,13 @@
       width: calc(20% - 2rem);
     }
   }
-  
+  .wrapper {
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+    
+}
+.button{
+  padding: 30px;
+  text-align: center;
+}

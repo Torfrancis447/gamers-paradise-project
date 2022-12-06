@@ -41,7 +41,7 @@ function GameCard({id,name,platforms,released,image,games}) {
             <h4>{name}</h4>
             <img src={image} alt={name}/>
             {hide ? (
-                <button onClick={handelMore}>MORE</button> 
+                <button  onClick={handelMore}>MORE</button> 
                 ):(<>
                 <button onClick={handelMore}>LESS</button>
                     <p>Platforms:<>{showPlatformIcons}</></p>

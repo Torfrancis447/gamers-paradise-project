@@ -25,8 +25,12 @@ function MyGamesList(){
       const renderGames = games.map((game)=>{
         
         return <GameCard 
-        key={game.id}               
-        game={game}
+        key={game.id}   
+        id={game.id}
+        platforms={game.game.platforms}
+        image={game.game.image}
+        rating={game.game.rating}           
+        game={game.game}
         buttonFunction={deleteGame}       
         />
     })

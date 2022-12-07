@@ -2,7 +2,7 @@
   "games": [
     {
       "game": {
-        "parent_platforms": [
+        "platforms": [
           {
             "platform": {
               "id": 1,
@@ -26,16 +26,23 @@
           },
           {
             "platform": {
-              "id": 7,
-              "name": "Nintendo",
-              "slug": "nintendo"
+              "id": 5,
+              "name": "Apple Macintosh",
+              "slug": "mac"
+            }
+          },
+          {
+            "platform": {
+              "id": 6,
+              "name": "Linux",
+              "slug": "linux"
             }
           }
         ],
-        "name": "The Witcher 3: Wild Hunt",
-        "released": "2015-05-18",
-        "background_image": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
-        "id": 3328
+        "name": "Portal 2",
+        "released": "2011-04-18",
+        "image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+        "rating": 4.62
       },
       "id": 1
     }

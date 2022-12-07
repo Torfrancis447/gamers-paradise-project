@@ -1,21 +1,22 @@
 import React, { useState } from "react";
+import {Card, Button} from 'react-bootstrap';
 
-function GameCard({ game, buttonFunction }) {
-    const [like,setLike] =useState(true)
+function GameCard({ name, released, rating, id, game, buttonFunction, platforms, image}) {
+    const [like,setLike] = useState(true)
     const [hide,setHide] =useState(true)
+                
+    
+    
+    
 
-        
-    const platforms=game.parent_platforms        
-    const name=game.name
-    const released=game.released
-    const image=game.background_image
 
     const gameObj={
-        parent_platforms: game.parent_platforms,        
+        platforms: platforms,        
         name: game.name,
         released: game.released,
-        background_image: game.background_image,
-        id:game.id
+        image: image,
+        id:id,
+        rating:rating
     }
 
    const  handelMore =()=>{
@@ -28,7 +29,7 @@ function GameCard({ game, buttonFunction }) {
    }
 
    
-    const showPlatformIcons = gameObj.platforms?.map((platform) => {
+    const showPlatformIcons = platforms?.map((platform) => {
         if(platform.platform.name === "PlayStation"){                            
             return <img alt={platform.platform.name} className="icon" src="https://iconarchive.com/download/i76049/martz90/circle-addon2/playstation.ico"/>
         } else if(platform.platform.name === "Xbox") {
@@ -50,23 +51,27 @@ function GameCard({ game, buttonFunction }) {
     return (
         <>
         <div className="card">
-            <h4>{name}</h4>
-            <img src={image} alt={name}/>
-            {hide ? (
-                <button  onClick={handelMore}>MORE</button> 
+            <Card/>
+            <Card.Title>{name}</Card.Title>
+            <Card.Img src={image} alt={name} onClick={()=> console.log(platforms)}/>
+            {/* {hide ? (
+                <Button variant="outline-dark" onClick={handelMore}>MORE</Button> 
                 ):(<>
-                <button onClick={handelMore}>LESS</button>
-                    <p>Platforms:<>{showPlatformIcons}</></p>
+                <Button variant="outline-dark" onClick={handelMore}>LESS</Button>
+                    <Card.Text>Platforms:<>{showPlatformIcons}</></Card.Text>
                                                        
-                    <span>Related Date: {released} </span>
+                    <Card.Text>Related Date: {released} </Card.Text>
                 </>
-            )}
-            <br></br>
+            )} */}
+            <Card.Text>Platforms: {showPlatformIcons}</Card.Text>
+            <Card.Text>Rating: {rating} </Card.Text>                                                       
+            <Card.Text>Related Date: {released} </Card.Text>
+
                     
-                <button className={like ? "": "logo"} onClick={handelClick}>🕹️</button>
-                <button type='click'onClick={()=>buttonFunction(gameObj)}>Fav</button>
-                
-            {console.log(gameObj)}
+                {/* <Button variant="outline-dark" className={like ? "": "logo"} onClick={handelClick}>🕹️</Button> */}
+                <Button variant="outline-primary"type='click'onClick={()=>buttonFunction(gameObj)}>⭐</Button>
+                {console.log(game)}
+            <Card/>
         </div>
         </>
     )

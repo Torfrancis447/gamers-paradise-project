@@ -70,7 +70,7 @@ function GameCard({ name, released, rating, id, game, buttonFunction, platforms,
                     
                 {/* <Button variant="outline-dark" className={like ? "": "logo"} onClick={handelClick}>🕹️</Button> */}
                 <Button variant="outline-primary"type='click'onClick={()=>buttonFunction(gameObj)}>⭐</Button>
-                {console.log(game)}
+                
             <Card/>
         </div>
         </>

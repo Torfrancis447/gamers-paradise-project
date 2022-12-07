@@ -1,19 +1,43 @@
 {
-  "posts": [
+  "games": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "game": {
+        "parent_platforms": [
+          {
+            "platform": {
+              "id": 1,
+              "name": "PC",
+              "slug": "pc"
+            }
+          },
+          {
+            "platform": {
+              "id": 2,
+              "name": "PlayStation",
+              "slug": "playstation"
+            }
+          },
+          {
+            "platform": {
+              "id": 3,
+              "name": "Xbox",
+              "slug": "xbox"
+            }
+          },
+          {
+            "platform": {
+              "id": 7,
+              "name": "Nintendo",
+              "slug": "nintendo"
+            }
+          }
+        ],
+        "name": "The Witcher 3: Wild Hunt",
+        "released": "2015-05-18",
+        "background_image": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+        "id": 3328
+      },
+      "id": 1
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

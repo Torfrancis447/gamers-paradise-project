@@ -1,22 +1,34 @@
 import React, { useState } from "react";
 
-function GameCard({id,name,platforms,released,image,games}) {
-    const [like,setLike] = useState(true)
+function GameCard({ game, buttonFunction }) {
+    const [like,setLike] =useState(true)
     const [hide,setHide] =useState(true)
-    const[thumbUp, setThumbUp] = useState("")
-   
+
+        
+    const platforms=game.parent_platforms        
+    const name=game.name
+    const released=game.released
+    const image=game.background_image
+
+    const gameObj={
+        parent_platforms: game.parent_platforms,        
+        name: game.name,
+        released: game.released,
+        background_image: game.background_image,
+        id:game.id
+    }
 
    const  handelMore =()=>{
      setHide(!hide)
    }
 
    const handelClick = (e)=>{
-    let userInput=e.target.id
+    
     setLike(!like)
    }
 
    
-    const showPlatformIcons = platforms.map((platform) => {
+    const showPlatformIcons = gameObj.platforms?.map((platform) => {
         if(platform.platform.name === "PlayStation"){                            
             return <img alt={platform.platform.name} className="icon" src="https://iconarchive.com/download/i76049/martz90/circle-addon2/playstation.ico"/>
         } else if(platform.platform.name === "Xbox") {
@@ -26,9 +38,9 @@ function GameCard({id,name,platforms,released,image,games}) {
         } else if(platform.platform.name === "Linux"){
             return <img alt={platform.platform.name} className="icon" src="https://iconarchive.com/download/i98403/dakirby309/simply-styled/OS-Linux.ico" />
         }
-        })  
+        })
+
     
-   
     
 
 
@@ -52,8 +64,9 @@ function GameCard({id,name,platforms,released,image,games}) {
             <br></br>
                     
                 <button className={like ? "": "logo"} onClick={handelClick}>🕹️</button>
+                <button type='click'onClick={()=>buttonFunction(gameObj)}>Fav</button>
                 
-            
+            {console.log(gameObj)}
         </div>
         </>
     )

@@ -1,5 +1,6 @@
 function Search({setSearched}){
 
+
     const handleSearched= (e) =>{
         setSearched(e.target.value)
     }
@@ -12,6 +13,8 @@ function Search({setSearched}){
             <input
             type="text"
             placeholder="Search your games... "
+            //User needs to search through name 
+                      
             //User needs to search through name
             onChange={handleSearched}           
             />

@@ -42,6 +42,7 @@ function App() {
       <Link className="button wrapper" to="/home"><Button>Home</Button></Link> 
       <Link className="button wrapper" to="/games"><Button>Games</Button></Link>
       <Link className="button wrapper" to="/myGames"><Button>My Games</Button></Link>
+      </div>
       <br></br>
         <Switch>
           <Route exact path="/home">

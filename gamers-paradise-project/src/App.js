@@ -3,8 +3,6 @@ import GameList from './components/GameList';
 import Header from './Header';
 // import Search from './Search'
 import React, { useEffect, useState } from "react"
-import Dashboard from './components/Dashboard';
-import Preferences from './components/Preferences'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { Link } from "react-router-dom";
 import MyGamesList from "./components/MyGamesList"
@@ -15,29 +13,23 @@ import {Redirect} from "react-router-dom"
 
 function App() {
   const [games,setGames] =useState([])
-  // const[searched, setSearched]=useState('')
-  // const[myGames, setMyGames]= useState([])
-const[redirectNow, setRedirectNow]= useState(false)
-  // const filteredGames= games.filter((plantArray) =>{
-  //   return plantArray.name?.toLowerCase().includes(searched.toLowerCase())})
+  const[searched, setSearched]=useState('')
+  const[redirectNow, setRedirectNow]= useState(false)
+  
+  
 
   useEffect(()=>{
-    fetch(`https://api.rawg.io/api/games?key=67202bd4d44e4c7da8fdbad44df5b8da&search`)
+    
+    fetch(`https://api.rawg.io/api/games?key=67202bd4d44e4c7da8fdbad44df5b8da&search=`)
     .then(res => res.json())
     .then(data => {
       setGames(data.results)
       setTimeout(() => setRedirectNow(true), 5000)})
-  }  
-,[])
+    }  
+  ,[])
 
-// useEffect(()=>{
-//   fetch('http://localhost:3000/games')
-//     .then(r => r.json())
-//     .then(myGames => setMyGames(myGames))
-//     console.log(myGames)
-// }, [])
 
-// 
+
   
   return redirectNow ? (
     <>
@@ -57,9 +49,10 @@ const[redirectNow, setRedirectNow]= useState(false)
           <Route path="/myGames">
           <MyGamesList />
           </Route>
+
           <Route path="/games">
                    
-          <GameList  g={games}/>          
+          <GameList  setGames={setGames} g={games}/>          
           </Route>
           
         </Switch>

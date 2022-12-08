@@ -35,9 +35,9 @@ function App() {
   
   return redirectNow ? (
     <>
-    <div className="wrapper">
-    <BrowserRouter>
-      
+    <div>
+    <div className="wrapper">   
+ 
       <h1>Gamer's Paradise</h1>
       <Link className="button wrapper" to="/home"><Button>Home</Button></Link> 
       <Link className="button wrapper" to="/games"><Button>Games</Button></Link>
@@ -57,24 +57,18 @@ function App() {
           <GameList setGames={setGames} g={games}/>          
           </Route>
           
-        </Switch>
-      </BrowserRouter>
+        </Switch>      
     </div>
     
-    <div >
-      
-      
-      
-    </div>
+   
     </>
   ) : (
-    <BrowserRouter>
-    <Switch>
-     
+    
+    <Switch>     
       <Header />
      <Redirect to="/games" /> 
     </Switch>
-    </BrowserRouter>
+    
   )
 }
 

@@ -3,8 +3,7 @@ import GameList from './components/GameList';
 import Header from './Header';
 // import Search from './Search'
 import React, { useEffect, useState } from "react"
-import Dashboard from './components/Dashboard';
-import Preferences from './components/Preferences'
+
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { Link } from "react-router-dom";
 import MyGamesList from "./components/MyGamesList"
@@ -43,25 +42,17 @@ const[redirectNow, setRedirectNow]= useState(false)
   return redirectNow ? (
     <>
     <div className="wrapper">
-          
+      <Header />      
       <BrowserRouter>
-      <h1>Loading</h1>
-      <h1>Gamer's Paradise</h1>
-      
-      <Link className="button wrapper" to="home"><Button>Home</Button></Link> 
-      <Link className="button wrapper" to="/games"><Button>Games</Button></Link>
-      <Link className="button wrapper" to="/myGames"><Button>My Games</Button></Link>
-      <br></br>
+      <Link className="button wrapper" to="/">Home</Link> 
+      <Link className="button wrapper" to="/games">Games</Link>
+      <Link className="button wrapper" to="/myGames">MyGames </Link>
         <Switch>
-          <Route path="/home">
-        <Header />
-          </Route>
           <Route path="/myGames">
           <MyGamesList />
           </Route>
-          <Route path="/games">
-                   
-          <GameList  g={games}/>          
+          <Route path="/games">          
+          <GameList  />          
           </Route>
           
         </Switch>

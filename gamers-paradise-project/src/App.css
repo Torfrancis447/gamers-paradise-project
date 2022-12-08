@@ -10,6 +10,7 @@
     border-style: solid;
     text-align: center;
     border-color: blanchedalmond;
+    background-color: brown;
   }
   
   .card img {
@@ -48,22 +49,16 @@
     padding: 20px;
     text-align: center;
     font-size: large;
-    
+    width: fit-content;
+    text-align: center;
 }
-.button{
+.button.wrapper{
   padding: 30px;
   text-align: center;
+  border: rgb(red, green, blue);
+  border-style: groove;
+  align-items: center;
 }
-
-.slide img {
-  width: 200px;
-  height: 100px;
-  display:inline-block;
-   ;
-} 
-.span {
-width:200px;
-}
-.car{
-  padding-left: 165px;
+.button{
+  width: fit-content;
 }

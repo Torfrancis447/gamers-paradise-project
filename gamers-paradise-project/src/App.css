@@ -52,6 +52,7 @@
   font-size: large;
   width: fit-content;
   text-align: center;
+  margin: auto;
 }
 .button.wrapper{
 padding: 30px;

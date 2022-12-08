@@ -1,13 +1,14 @@
+import Slide from "./components/Slide"
 function Header(){
 
     return(
         <header >
+            <Slide />
             <h1>
-            Gamer's Paradise
+            Gamer's Paradise <br></br> The Best App To Keep Track Of All Your Games!!! 
             </h1>
-            <br></br>
-           
-                  
+            <Slide /> 
+
         </header>
     )
 }

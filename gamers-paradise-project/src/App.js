@@ -3,12 +3,14 @@ import GameList from './components/GameList';
 import Header from './Header';
 // import Search from './Search'
 import React, { useEffect, useState } from "react"
+
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { Link } from "react-router-dom";
 import MyGamesList from "./components/MyGamesList"
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Redirect} from "react-router-dom"
+
 
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setGames(data.results)
-      setTimeout(() => setRedirectNow(true), 5000)})
+      setTimeout(() => setRedirectNow(true), 8000)})
     }  
   ,[])
 
@@ -34,8 +36,7 @@ function App() {
   return redirectNow ? (
     <>
     <div className="wrapper">
-          
-      <BrowserRouter>
+    <BrowserRouter>
       <h1>Loading</h1>
       <h1>Gamer's Paradise</h1>
       <Link className="button wrapper" to="/home"><Button>Home</Button></Link> 
@@ -68,6 +69,7 @@ function App() {
   ) : (
     <BrowserRouter>
     <Switch>
+     
       <Header />
      <Redirect to="/games" /> 
     </Switch>

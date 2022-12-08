@@ -62,9 +62,8 @@ function GameCard({ genres, name, released, rating, id, game, buttonFunction, pl
             <br></br>
             <Card.Text>Platforms: {showPlatformIcons}</Card.Text>
             <Card.Text>Rating: {rating} </Card.Text>                                                       
-            <Card.Text>Related Date: {released} </Card.Text>
-            {/* {console.log(game.genres.name)} */}
-            
+            <Card.Text>Released Date: {released} </Card.Text>
+
                     
                 
                 <Button variant={ favorited ? "outline-primary" : "primary"} type='click'onClick={()=>{handleClick(gameObj)}}>⭐</Button>

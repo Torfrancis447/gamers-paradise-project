@@ -23,82 +23,28 @@
               "name": "Xbox",
               "slug": "xbox"
             }
+          },
+          {
+            "platform": {
+              "id": 5,
+              "name": "Apple Macintosh",
+              "slug": "mac"
+            }
+          },
+          {
+            "platform": {
+              "id": 6,
+              "name": "Linux",
+              "slug": "linux"
+            }
           }
         ],
-        "name": "Grand Theft Auto V",
-        "released": "2013-09-17",
-        "image": "https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg",
-        "rating": 4.47
+        "name": "Portal 2",
+        "released": "2011-04-18",
+        "image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+        "rating": 4.62
       },
       "id": 1
-    },
-    {
-      "game": {
-        "platforms": [
-          {
-            "platform": {
-              "id": 1,
-              "name": "PC",
-              "slug": "pc"
-            }
-          },
-          {
-            "platform": {
-              "id": 3,
-              "name": "Xbox",
-              "slug": "xbox"
-            }
-          }
-        ],
-        "name": "Halo Infinite",
-        "released": "2021-12-08",
-        "image": "https://media.rawg.io/media/games/e1f/e1ffbeb1bac25b19749ad285ca29e158.jpg",
-        "rating": 3.74
-      },
-      "id": 2
-    },
-    {
-      "game": {
-        "platforms": [
-          {
-            "platform": {
-              "id": 2,
-              "name": "PlayStation",
-              "slug": "playstation"
-            }
-          }
-        ],
-        "name": "God of War: Ragnarök",
-        "released": "2022-11-09",
-        "image": "https://media.rawg.io/media/games/1c3/1c305096502c475c00276c827f0fd697.jpg",
-        "rating": 4.6
-      },
-      "id": 3
-    },
-    {
-      "game": {
-        "platforms": [
-          {
-            "platform": {
-              "id": 1,
-              "name": "PC",
-              "slug": "pc"
-            }
-          },
-          {
-            "platform": {
-              "id": 2,
-              "name": "PlayStation",
-              "slug": "playstation"
-            }
-          }
-        ],
-        "name": "GOD EATER RESURRECTION",
-        "released": "2016-06-28",
-        "image": "https://media.rawg.io/media/games/0ca/0cab3cf814d9988277e023687ed3fd4f.jpg",
-        "rating": 3.12
-      },
-      "id": 4
     }
   ]
 }

@@ -1,5 +1,5 @@
 body{
-  background-color: bisque;
+  background-color: grey;
 }
 
 header h1 {
@@ -12,6 +12,8 @@ header h1 {
   margin: auto; 
   border-radius: 10px;
   
+   
+ 
 }
 
 .search-bar {
@@ -25,3 +27,15 @@ header h1 {
   object-fit:contain;
 }
 
+header{
+  margin-top:15%;
+  margin-right:auto;
+  margin-bottom:0;
+  margin-left:auto;
+  border-style: solid;
+  
+}
+.slide > img{
+width:200px;
+padding-top: 10px;
+}

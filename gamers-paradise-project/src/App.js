@@ -26,7 +26,7 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setGames(data.results)
-      setTimeout(() => setRedirectNow(true), 5000)})
+      setTimeout(() => setRedirectNow(true), 8000)})
     }  
   ,[])
 

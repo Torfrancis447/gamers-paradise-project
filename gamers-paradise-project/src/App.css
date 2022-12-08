@@ -1,64 +1,65 @@
 
+
 .logo {
    
-    color: blue;
-    background-color: gold;
-  }
+  color: blue;
+  background-color: gold;
+}
 .card {
-    list-style: none;
-    margin: 1rem;
-    border-style: solid;
-    text-align: center;
-    border-color: blanchedalmond;
-    background-color: brown;
-  }
+  list-style: none;
+  margin: 1rem;
+  border-style: solid;
+  text-align: center;
+  border-color: blanchedalmond;
+  background-color: brown;
+}
+
+.card img {
+  width:100%;
   
-  .card img {
-    width:100%;
+}
+
+.card button {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
     
   }
-  
-  .card button {
-    margin-top: 0.5rem;
+
+  .card {
+    width: calc(30% - 2rem);
   }
-  
-  @media (min-width: 768px) {
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      
-    }
-  
-    .card {
-      width: calc(30% - 2rem);
-    }
+}
+
+@media (min-width: 1000px) {
+  .card {
+    width: calc(25% - 2rem);
   }
-  
-  @media (min-width: 1000px) {
-    .card {
-      width: calc(25% - 2rem);
-    }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: calc(20% - 2rem);
   }
-  
-  @media (min-width: 1200px) {
-    .card {
-      width: calc(20% - 2rem);
-    }
-  }
-  .wrapper {
-    padding: 20px;
-    text-align: center;
-    font-size: large;
-    width: fit-content;
-    text-align: center;
+}
+.wrapper {
+  padding: 20px;
+  text-align: center;
+  font-size: large;
+  width: fit-content;
+  text-align: center;
 }
 .button.wrapper{
-  padding: 30px;
-  text-align: center;
-  border: rgb(red, green, blue);
-  border-style: groove;
-  align-items: center;
+padding: 30px;
+text-align: center;
+border: rgb(red, green, blue);
+border-style: groove;
+align-items: center;
 }
 .button{
-  width: fit-content;
+width: fit-content;
 }

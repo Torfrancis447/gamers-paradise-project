@@ -38,6 +38,10 @@ function App() {
     <div >
       <div className='wrapper'>
         <h1>Loading</h1>
+    <>
+    <div>
+    <div className="wrapper">   
+ 
       <h1>Gamer's Paradise</h1>
       <Link className="button wrapper" to="/home"><Button>Home</Button></Link> 
       <Link className="button wrapper" to="/games"><Button>Games</Button></Link>
@@ -45,8 +49,8 @@ function App() {
       </div>
       <br></br>
         <Switch>
-          <Route path="/home">
-        <Header />
+          <Route exact path="/home">
+            <Header />
           </Route>
           <Route path="/myGames">
             <MyGamesList/>

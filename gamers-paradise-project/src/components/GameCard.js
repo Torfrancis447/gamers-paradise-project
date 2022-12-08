@@ -55,7 +55,7 @@ function GameCard({ genres, name, released, rating, id, game, buttonFunction, pl
     return (
         <>
         <div className="card">
-            <Card/>
+            
             <Card.Title>{name}</Card.Title>
             <Card.Img src={image} alt={name} onClick={()=> console.log(platforms)}/>
             
@@ -68,7 +68,7 @@ function GameCard({ genres, name, released, rating, id, game, buttonFunction, pl
                 
                 <Button variant={ favorited ? "outline-primary" : "primary"} type='click'onClick={()=>{handleClick(gameObj)}}>⭐</Button>
                 
-            <Card/>
+            
         </div>
         </>
     )

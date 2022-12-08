@@ -55,10 +55,13 @@
   margin: auto;
 }
 .button.wrapper{
-padding: 30px;
-text-align: center;
+padding: 50px;
+
 border: rgb(red, green, blue);
-align-items: center;
+text-align: center;
+width: 50%;
+margin-right:auto;
+margin-left:auto
 }
 .button{
 width: fit-content;

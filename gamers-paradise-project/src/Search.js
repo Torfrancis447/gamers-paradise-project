@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import {Button, Form} from 'react-bootstrap'
 
 function Search({setGames}){
     const[search, setSearch] =useState("")
@@ -27,20 +28,19 @@ function Search({setGames}){
    
     return(
         <div className="search-bar">
-           <label>
-            Search Games:
-            </label>
-            <form onSubmit={handleSubmit}>
-            <input
+           
+            <Form onSubmit={handleSubmit}>
+            <Form.Control 
             type="text"
             placeholder="Search your games... "
             //User needs to search through name 
-             value={search}   
+            value={search}   
             //User needs to search through name
             onChange={handleSearch}           
             />
-            <button type="submit">Search</button>
-            </form>
+            <br></br>
+            <Button variant="secondary" size="lg"type="submit">Search</Button>
+            </Form>
 
         </div>
     )

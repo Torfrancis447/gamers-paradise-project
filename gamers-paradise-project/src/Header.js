@@ -6,7 +6,7 @@ function Header(){
             Gamer's Paradise
             </h1>
             <br></br>
-            <h2>I'm hungry</h2>
+           
                   
         </header>
     )

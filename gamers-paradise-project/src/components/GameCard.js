@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import {Card, Button} from 'react-bootstrap';
 
-function GameCard({ name, released, rating, id, game, buttonFunction, platforms, image}) {
-    const [like,setLike] = useState(true)
-    const [hide,setHide] =useState(true)
+function GameCard({ genres, name, released, rating, id, game, buttonFunction, platforms, image}) {
+    const [favorited,setFavorited] = useState(true)
+    const [isGenre,setIsGenre] =useState(true)
                 
+    // const gameGenres = genres.map((genre) =>{
+    //     return genre.name
+    // })
+
+    // if(game.genres[0].name === "Action"){
+
+    // }
     
-    
-    
+    // const genreObj= genre.map((genre)=> console.log(genre))
 
 
     const gameObj={
@@ -19,14 +25,12 @@ function GameCard({ name, released, rating, id, game, buttonFunction, platforms,
         rating:rating
     }
 
-   const  handelMore =()=>{
-     setHide(!hide)
+   const  handleClick =(gameObj)=>{
+     setFavorited(!favorited)
+     buttonFunction(gameObj)
    }
 
-   const handelClick = (e)=>{
-    
-    setLike(!like)
-   }
+
 
    
     const showPlatformIcons = platforms?.map((platform) => {
@@ -54,22 +58,15 @@ function GameCard({ name, released, rating, id, game, buttonFunction, platforms,
             <Card/>
             <Card.Title>{name}</Card.Title>
             <Card.Img src={image} alt={name} onClick={()=> console.log(platforms)}/>
-            {/* {hide ? (
-                <Button variant="outline-dark" onClick={handelMore}>MORE</Button> 
-                ):(<>
-                <Button variant="outline-dark" onClick={handelMore}>LESS</Button>
-                    <Card.Text>Platforms:<>{showPlatformIcons}</></Card.Text>
-                                                       
-                    <Card.Text>Related Date: {released} </Card.Text>
-                </>
-            )} */}
+            
+            <br></br>
             <Card.Text>Platforms: {showPlatformIcons}</Card.Text>
             <Card.Text>Rating: {rating} </Card.Text>                                                       
             <Card.Text>Released Date: {released} </Card.Text>
 
                     
-                {/* <Button variant="outline-dark" className={like ? "": "logo"} onClick={handelClick}>🕹️</Button> */}
-                <Button variant="outline-primary"type='click'onClick={()=>buttonFunction(gameObj)}>⭐</Button>
+                
+                <Button variant={ favorited ? "outline-primary" : "primary"} type='click'onClick={()=>{handleClick(gameObj)}}>⭐</Button>
                 
             <Card/>
         </div>

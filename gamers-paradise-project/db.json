@@ -1,3 +1,50 @@
 {
-  "games": []
+  "games": [
+    {
+      "game": {
+        "platforms": [
+          {
+            "platform": {
+              "id": 1,
+              "name": "PC",
+              "slug": "pc"
+            }
+          },
+          {
+            "platform": {
+              "id": 2,
+              "name": "PlayStation",
+              "slug": "playstation"
+            }
+          },
+          {
+            "platform": {
+              "id": 3,
+              "name": "Xbox",
+              "slug": "xbox"
+            }
+          },
+          {
+            "platform": {
+              "id": 5,
+              "name": "Apple Macintosh",
+              "slug": "mac"
+            }
+          },
+          {
+            "platform": {
+              "id": 6,
+              "name": "Linux",
+              "slug": "linux"
+            }
+          }
+        ],
+        "name": "Portal 2",
+        "released": "2011-04-18",
+        "image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+        "rating": 4.62
+      },
+      "id": 1
+    }
+  ]
 }

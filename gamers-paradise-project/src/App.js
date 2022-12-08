@@ -26,7 +26,7 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setGames(data.results)
-      setTimeout(() => setRedirectNow(true), 8000)})
+      setTimeout(() => setRedirectNow(true), 1000)})
     }  
   ,[])
 
@@ -34,6 +34,10 @@ function App() {
 
   
   return redirectNow ? (
+   
+    <div >
+      <div className='wrapper'>
+        <h1>Loading</h1>
     <>
     <div>
     <div className="wrapper">   
@@ -49,26 +53,22 @@ function App() {
             <Header />
           </Route>
           <Route path="/myGames">
-          <MyGamesList />
+            <MyGamesList/>
           </Route>
-
           <Route path="/games">
-                   
-          <GameList setGames={setGames} g={games}/>          
+          <GameList  setGames={setGames} g={games}/>          
           </Route>
-          
-        </Switch>      
+        </Switch>
     </div>
-    
-   
-    </>
   ) : (
-    
-    <Switch>     
+   <div>
+     <Switch>
+      <Route>
       <Header />
      <Redirect to="/games" /> 
+    </Route>
     </Switch>
-    
+    </div>
   )
 }
 

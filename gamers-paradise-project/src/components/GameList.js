@@ -58,7 +58,7 @@ function GameList({g, setGames}) {
         <br></br>
               
         <Search  setGames={setFilteredGames}/>
-        <Dropdown>
+        {/* <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
                 Genres
             </Dropdown.Toggle>
@@ -68,7 +68,7 @@ function GameList({g, setGames}) {
                 <Dropdown.Item href="#/action-2">Adventure</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">RPG</Dropdown.Item>
             </Dropdown.Menu>
-        </Dropdown>     
+        </Dropdown>      */}
         {/* <button onClick={filterGameGenres}>Action</button>  */}
         
         <ul className="cards">

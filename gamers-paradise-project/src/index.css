@@ -17,9 +17,16 @@ header h1 {
 }
 
 .search-bar {
-  text-align: center
+  text-align: center;
+  width: 50%;
+  margin-right:auto;
+  margin-left:auto
 }
-
+.search-bar Button{
+  text-align: center;
+  margin: auto
+  
+}
 
 .card .icon {
   max-width:10%;

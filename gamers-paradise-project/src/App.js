@@ -11,6 +11,7 @@ import MyGamesList from "./components/MyGamesList"
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Redirect} from "react-router-dom"
+import Slide from './components/Slide';
 
 
 function App() {
@@ -26,7 +27,7 @@ const[redirectNow, setRedirectNow]= useState(false)
     .then(res => res.json())
     .then(data => {
       setGames(data.results)
-      setTimeout(() => setRedirectNow(true), 5000)})
+      setTimeout(() => setRedirectNow(true), 3000)})
   }  
 ,[])
 
@@ -46,7 +47,8 @@ const[redirectNow, setRedirectNow]= useState(false)
       <BrowserRouter>
       <h1>Loading</h1>
       <h1>Gamer's Paradise</h1>
-      <Link className="button wrapper" to="/home"><Button>Home</Button></Link> 
+      
+      <Link className="button wrapper" to="home"><Button>Home</Button></Link> 
       <Link className="button wrapper" to="/games"><Button>Games</Button></Link>
       <Link className="button wrapper" to="/myGames"><Button>My Games</Button></Link>
       <br></br>
@@ -75,6 +77,7 @@ const[redirectNow, setRedirectNow]= useState(false)
   ) : (
     <BrowserRouter>
     <Switch>
+     
       <Header />
      <Redirect to="/games" /> 
     </Switch>

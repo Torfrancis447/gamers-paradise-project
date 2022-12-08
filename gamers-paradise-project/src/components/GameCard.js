@@ -65,7 +65,7 @@ function GameCard({ name, released, rating, id, game, buttonFunction, platforms,
             )} */}
             <Card.Text>Platforms: {showPlatformIcons}</Card.Text>
             <Card.Text>Rating: {rating} </Card.Text>                                                       
-            <Card.Text>Related Date: {released} </Card.Text>
+            <Card.Text>Released Date: {released} </Card.Text>
 
                     
                 {/* <Button variant="outline-dark" className={like ? "": "logo"} onClick={handelClick}>🕹️</Button> */}

@@ -31,6 +31,7 @@ function MyGamesList(){
         image={game.game.image}
         rating={game.game.rating}           
         game={game.game}
+        released={game.game.released}
         buttonFunction={deleteGame}       
         />
     })

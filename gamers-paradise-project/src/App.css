@@ -54,3 +54,16 @@
   padding: 30px;
   text-align: center;
 }
+
+.slide img {
+  width: 200px;
+  height: 100px;
+  display:inline-block;
+   ;
+} 
+.span {
+width:200px;
+}
+.car{
+  padding-left: 165px;
+}

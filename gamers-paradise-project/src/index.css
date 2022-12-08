@@ -35,3 +35,7 @@ header{
   border-style: solid;
   
 }
+.slide > img{
+width:200px;
+padding-top: 10px;
+}

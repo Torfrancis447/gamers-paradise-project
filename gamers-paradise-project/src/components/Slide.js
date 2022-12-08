@@ -25,12 +25,16 @@ function Slide() {
   return (
     
     <>
-    <Carousel autoPlaySpeed={300} arrows={false} infinite={true} autoPlay={true} responsive={responsive}>
-  <div className='slide'><img src='https://pyxis.nymag.com/v1/imgs/9b9/222/a1b6c8d5c0a033966fe585930eebf4fa5a-best-video-games-year-so-far-november-le.2x.rsocial.w600.jpg'/>
+    <Carousel autoPlaySpeed={800} arrows={false} infinite={true} autoPlay={true} responsive={responsive}>
+  <div className='slide'><img src='https://cdn.mos.cms.futurecdn.net/MeU4HokrzUwhbd9PJBQCSV-1200-80.png'/>
   </div>
-  <div className='slide'><img src='https://hips.hearstapps.com/hmg-prod/images/best-video-games-2018-1545927666.jpg'/></div>
-  <div className='slide'><img src='https://hips.hearstapps.com/hmg-prod/images/best-video-games-2018-1545927666.jpg'/></div>
-  <div className='slide'><img src='https://hips.hearstapps.com/hmg-prod/images/best-video-games-2018-1545927666.jpg'/></div>
+  <div className='slide'><img src='https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Overwatch2WatchpointPack_image1600w.jpg'/></div>
+  <div className='slide'><img src='https://i.ytimg.com/vi/wQATS4HOxdo/maxresdefault.jpg'/></div>
+  <div className='slide'><img src='https://p325k7wa.twic.pics/high/elden-ring/elden-ring/04-retailers/00-beautyshots/04-Standard/ER_standard_keyart.jpg?twic=v1/step=10/quality=80/max=760'/></div>
+  <div className='slide'><img src='https://cdn.cloudflare.steamstatic.com/steam/apps/570940/capsule_616x353.jpg?t=1668145065'/></div>
+  <div className='slide'><img src='https://images2.alphacoders.com/204/thumb-1920-204972.jpg'/></div>
+  <div className='slide'><img src='https://i.ytimg.com/vi/H4rYVsJ4v9Y/maxresdefault.jpg'/></div>
+  <div className='slide'><img src='https://cdn.akamai.steamstatic.com/steam/apps/12210/capsule_616x353.jpg?t=1618853493'/></div>
 </Carousel>;
     </>
   );

@@ -1,9 +1,49 @@
 
 
-.logo {
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: aliceblue;
+  width: fit-content;
+  margin: auto; 
+  border-radius: 10px;
+  
    
-  color: blue;
-  background-color: gold;
+ 
+}
+
+.search-bar {
+  text-align: center;
+  width: 50%;
+  margin-right:auto;
+  margin-left:auto
+}
+.search-bar Button{
+  text-align: center;
+  margin: auto
+  
+}
+
+.card .icon {
+  max-width:10%;
+  padding-inline: 5;
+  object-fit:contain;
+}
+
+header {
+  margin-top:15%;
+  margin-right:auto;
+  margin-bottom:0;
+  margin-left:auto;
+  border-style: solid;
+  
+}
+.slide > img{
+width:200px;
+padding-top: 10px;
 }
 .card {
   list-style: none;
@@ -60,8 +100,7 @@ padding: 50px;
 border: rgb(red, green, blue);
 text-align: center;
 width: 50%;
-margin-right:auto;
-margin-left:auto
+
 }
 .button{
 width: fit-content;

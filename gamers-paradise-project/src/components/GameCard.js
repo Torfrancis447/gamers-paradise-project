@@ -1,19 +1,11 @@
 import React, { useState } from "react";
 import {Card, Button} from 'react-bootstrap';
+import Spinner from 'react-bootstrap/Spinner'
 
-function GameCard({ genres, name, released, rating, id, game, buttonFunction, platforms, image}) {
+function GameCard({ name, released, rating, id, game, buttonFunction, platforms, image}) {
     const [favorited,setFavorited] = useState(true)
-    const [isGenre,setIsGenre] =useState(true)
-                
-    // const gameGenres = genres.map((genre) =>{
-    //     return genre.name
-    // })
+    const [isLoaded,setIsLoaded] =useState(false)
 
-    // if(game.genres[0].name === "Action"){
-
-    // }
-    
-    // const genreObj= genre.map((genre)=> console.log(genre))
 
 
     const gameObj={
@@ -46,7 +38,7 @@ function GameCard({ genres, name, released, rating, id, game, buttonFunction, pl
         })
 
     
-    
+    const dataLoaded = () =>(setIsLoaded(!isLoaded))
 
 
 
@@ -54,21 +46,29 @@ function GameCard({ genres, name, released, rating, id, game, buttonFunction, pl
 
     return (
         <>
+        
         <div className="card">
-            
+      
+          <>
             <Card.Title>{name}</Card.Title>
-            <Card.Img src={image} alt={name} onClick={()=> console.log(platforms)}/>
-            
+            <Card.Img src={image} alt={name} onClick={() => console.log(platforms)} />
+
             <br></br>
             <Card.Text>Platforms: {showPlatformIcons}</Card.Text>
-            <Card.Text>Rating: {rating} </Card.Text>                                                       
+            <Card.Text>Rating: {rating} </Card.Text>
             <Card.Text>Released Date: {released} </Card.Text>
 
-                    
-                
-                <Button variant={ favorited ? "outline-primary" : "primary"} type='click'onClick={()=>{handleClick(gameObj)}}>⭐</Button>
-                
-            
+            <Button
+              variant={favorited ? "outline-primary" : "primary"}
+              type="click"
+              onClick={() => {
+                handleClick(gameObj);
+              }}
+            >
+              ⭐
+            </Button>
+          </>
+       
         </div>
         </>
     )

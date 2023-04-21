@@ -23,6 +23,9 @@ function MyGamesList(){
         }  
     
       const renderGames = games.map((game)=>{
+        if (games.length === 0) {
+          return <h1>No game found</h1>;
+        }
         
         return <GameCard 
         key={game.id}   

@@ -14,16 +14,30 @@ header h1 {
    
  
 }
-
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin: 1rem;
+  
+}
+.container {
+  align-items: center;
+  justify-content: center;
+  width:100%
+}
 .search-bar {
   text-align: center;
   width: 50%;
   margin-right:auto;
-  margin-left:auto
+  margin-left:auto;
+  padding: 1rem;
 }
 .search-bar Button{
   text-align: center;
-  margin: auto
+  margin: auto;
+  margin-top: 1rem;
+  display: inline-block;
   
 }
 
@@ -87,11 +101,8 @@ padding-top: 10px;
   }
 }
 .wrapper {
-  padding: 20px;
-  text-align: center;
-  font-size: large;
-  width: fit-content;
-  text-align: center;
+  padding: 5 px;
+  text-align: center;  
   margin: auto;
 }
 .button.wrapper{

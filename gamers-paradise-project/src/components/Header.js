@@ -1,15 +1,14 @@
-import Slide from "./Slide"
-function Header(){
-
-    return(
-        <header >
-            <Slide />
-            <h1>
-            Gamer's Paradise <br></br> The Best App To Keep Track Of All Your Games!!! 
-            </h1>
-            <Slide /> 
-
-        </header>
-    )
+import Slide from "./Slide.js";
+function Header() {
+  return (
+    <header>
+      <Slide />
+      <h1>
+         The Best App To Keep Track Of All Your
+        Games!!!
+      </h1>
+      <Slide />
+    </header>
+  );
 }
-export default Header
+export default Header;

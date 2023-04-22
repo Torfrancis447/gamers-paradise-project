@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {Card, Button} from 'react-bootstrap';
-import Spinner from 'react-bootstrap/Spinner'
+import {Spinner} from 'react-bootstrap'
 
 function GameCard({ name, released, rating, id, game, buttonFunction, platforms, image}) {
     const [favorited,setFavorited] = useState(true)
@@ -40,6 +40,7 @@ function GameCard({ name, released, rating, id, game, buttonFunction, platforms,
     
     const dataLoaded = () =>(setIsLoaded(!isLoaded))
 
+      
 
 
 

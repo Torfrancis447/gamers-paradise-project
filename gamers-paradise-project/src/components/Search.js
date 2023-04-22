@@ -36,8 +36,8 @@ function Search({setSearched}){
             value={search}  
             onChange={handleSearch}           
             />
-            <br></br>
-            <Button variant="secondary" size="lg"type="submit">Search</Button>
+            
+            <Button variant="secondary" size="lg" type="submit">Search</Button>
             </Form>
 
         </div>

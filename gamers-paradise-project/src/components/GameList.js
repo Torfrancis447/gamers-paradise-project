@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react"
-import GameCard from "./GameCard"
+import GameCard from "./GameCard.js"
 // import Search from "../Search"
-import Form from "react-bootstrap/Form"
-import Dropdown from 'react-bootstrap/Dropdown'
-import Spinner from 'react-bootstrap/Spinner'
+// import Form from "react-bootstrap/Form"
+// import Dropdown from 'react-bootstrap/Dropdown'
+// import Spinner from 'react-bootstrap/Spinner'
 
 
 function GameList({games, setGames}) {
@@ -54,13 +54,11 @@ function GameList({games, setGames}) {
     
 
     return (
-        <>
-        <br></br>
-        <ul className="cards">            
-            <br></br>
+        <div className="cards">
+        
             {renderGames}
-        </ul>
-        </>
+        
+        </div>
     )
 }
 export default GameList

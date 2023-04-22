@@ -1,4 +1,4 @@
-import Slide from "./components/Slide"
+import Slide from "./Slide"
 function Header(){
 
     return(

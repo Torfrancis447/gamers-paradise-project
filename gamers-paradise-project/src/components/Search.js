@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {Button, Form} from 'react-bootstrap'
 
-function Search({setGames}){
+function Search({setSearched}){
     const[search, setSearch] =useState("")
 
 
@@ -11,13 +11,12 @@ function Search({setGames}){
     }
    
     const handleSubmit =(e)=>{
-        
-
-        e.preventDefault()        
+                e.preventDefault()        
             fetch(`https://api.rawg.io/api/games?key=67202bd4d44e4c7da8fdbad44df5b8da&search=${search.split(" ").join("-").toLowerCase()}`)
              .then(res => res.json())
              .then(data => {
-          setGames(data.results);
+                console.log(data)
+          setSearched(data.results);
           setSearch("")
           })
     }     
@@ -27,15 +26,14 @@ function Search({setGames}){
  
    
     return(
+
         <div className="search-bar">
            
             <Form onSubmit={handleSubmit}>
             <Form.Control 
             type="text"
-            placeholder="Search your games... "
-            //User needs to search through name 
-            value={search}   
-            //User needs to search through name
+            placeholder="Search for games... "
+            value={search}  
             onChange={handleSearch}           
             />
             <br></br>

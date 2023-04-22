@@ -1,75 +1,62 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import GameList from './components/GameList';
-import Header from './Header';
-// import Search from './Search'
+import Header from './components/Header';
+import Search from './components/Search'
 import React, { useEffect, useState } from "react"
-
+import NavBar from './components/NavBar';
+import Preferences from './components/Preferences'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { Link } from "react-router-dom";
-import MyGamesList from "./components/MyGamesList"
-import Button from 'react-bootstrap/Button'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Redirect} from "react-router-dom"
+import Slide from './components/Slide';
+import Spinner from 'react-bootstrap/Spinner'
 
-
+const API_KEY = process.env.REACT_APP_API_KEY
 
 function App() {
   const [games,setGames] =useState([])
   const[searched, setSearched]=useState('')
-  const[redirectNow, setRedirectNow]= useState(false)
+  const[isLoaded, setIsLoaded]=useState(false)
   
-  
-
+ 
   useEffect(()=>{
-    
-    fetch(`https://api.rawg.io/api/games?key=67202bd4d44e4c7da8fdbad44df5b8da&search=`)
+    setIsLoaded(false);
+    fetch(`https://api.rawg.io/api/games?key=${API_KEY}`)
     .then(res => res.json())
     .then(data => {
       setGames(data.results)
-      setTimeout(() => setRedirectNow(true), 1000)})
-    }  
-  ,[])
+      setIsLoaded(true)
+    })
+  }
+,[])
 
+const filteredGames= games.filter((game) =>{
+    return game.name.toLowerCase().includes(searched.toLowerCase())})
 
-
+if (filteredGames.length <= 0)
+return <h1> no game found </h1>
   
-  return redirectNow ? (
-   
-    <div >
-      <div className='wrapper'>
-        <h1>Loading</h1>
-    <>
-    <div>
-    <div className="wrapper">   
- 
-      <h1>Gamer's Paradise</h1>
-      <Link className="button wrapper" to="/home"><Button>Home</Button></Link> 
-      <Link className="button wrapper" to="/games"><Button>Games</Button></Link>
-      <Link className="button wrapper" to="/myGames"><Button>My Games</Button></Link>
-      </div>
-      <br></br>
+return (
+  <>
+  <NavBar />
+  <Header />
+    <div className="wrapper">      
+      <BrowserRouter>
+       
         <Switch>
-          <Route exact path="/home">
-            <Header />
-          </Route>
-          <Route path="/myGames">
-            <MyGamesList/>
-          </Route>
+          <Route path="/search"></Route>
           <Route path="/games">
-          <GameList  setGames={setGames} g={games}/>          
+            <Search setSearched={setGames} />            
+            {isLoaded ? <GameList games={filteredGames} key={filteredGames.id} /> : <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>}
           </Route>
         </Switch>
+      </BrowserRouter>
     </div>
-  ) : (
-   <div>
-     <Switch>
-      <Route>
-      <Header />
-     <Redirect to="/games" /> 
-    </Route>
-    </Switch>
-    </div>
-  )
+    
+  </>
+);
 }
 
 export default App;

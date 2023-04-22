@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from "react"
 import GameCard from "./GameCard"
-import Search from "../Search"
+// import Search from "../Search"
 import Form from "react-bootstrap/Form"
 import Dropdown from 'react-bootstrap/Dropdown'
+import Spinner from 'react-bootstrap/Spinner'
 
 
-
-function GameList({g, setGames}) {
-    const [filteredGames,setFilteredGames] =useState(g)
+function GameList({games, setGames}) {
+    // const [filteredGames,setFilteredGames] =useState(game)
     // const[searched, setSearched]=useState('')
 
    
@@ -26,17 +26,17 @@ function GameList({g, setGames}) {
         
         // }
 
-    const gameGenres= g.filter((games) =>{
-        return games.genres[0].name?.includes("Action")
-    })
+    // const gameGenres= g.filter((games) =>{
+    //     return games.genres[0].name?.includes("Action")
+    // })
 
-    const filterGameGenres = () => setFilteredGames(gameGenres)
+    // const filterGameGenres = () => setFilteredGames(gameGenres)
 
 
     
         
     
-    const renderGames = filteredGames.map((game)=>{
+    const renderGames = games.map((game)=>{
         
         return <GameCard 
         key={game.id}
@@ -56,23 +56,7 @@ function GameList({g, setGames}) {
     return (
         <>
         <br></br>
-              
-        <Search  setGames={setFilteredGames}/>
-        {/* <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Genres
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-                <Dropdown.Item onClick={filterGameGenres} >Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Adventure</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">RPG</Dropdown.Item>
-            </Dropdown.Menu>
-        </Dropdown>      */}
-        {/* <button onClick={filterGameGenres}>Action</button>  */}
-        
-        <ul className="cards">
-            
+        <ul className="cards">            
             <br></br>
             {renderGames}
         </ul>

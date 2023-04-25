@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import { Spinner } from "react-bootstrap";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+export const API_KEY = process.env.REACT_APP_API_KEY;
 
 function App() {
   const [games, setGames] = useState([]);

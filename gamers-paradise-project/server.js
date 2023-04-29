@@ -1,7 +1,13 @@
+import * as dotenv from 'dotenv' 
+dotenv.config()
 import express from "express";
 import bodyParser from "body-parser";
 import userRoutes from "./routes/user.js";
 import mongoose from "mongoose";
+
+
+
+export const mongoDb = process.env.DB_CONNECTION
 
 const app = express();
 const PORT = 5000;
@@ -15,9 +21,7 @@ app.get("/", (req, res) => res.send("hello from homepage"));
 
 
 mongoose
-    .connect(
-        "mongodb+srv://admin:Tef10068622!@cluster0.winnb8p.mongodb.net/gamers-paradise?retryWrites=true&w=majority"
-    )
+    .connect(mongoDb)
     .then(() => {
         console.log("connect to Database");
         listening;
